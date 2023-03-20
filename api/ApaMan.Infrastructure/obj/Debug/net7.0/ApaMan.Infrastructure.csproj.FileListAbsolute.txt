@@ -1,0 +1,12 @@
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\bin\Debug\net7.0\ApaMan.Infrastructure.deps.json
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\bin\Debug\net7.0\ApaMan.Infrastructure.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\bin\Debug\net7.0\ApaMan.Infrastructure.pdb
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ApaMan.Infrastructure.csproj.AssemblyReference.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ApaMan.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ApaMan.Infrastructure.AssemblyInfoInputs.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ApaMan.Infrastructure.AssemblyInfo.cs
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ApaMan.Infrastructure.csproj.CoreCompileInputs.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ApaMan.Infrastructure.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\refint\ApaMan.Infrastructure.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ApaMan.Infrastructure.pdb
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Infrastructure\obj\Debug\net7.0\ref\ApaMan.Infrastructure.dll

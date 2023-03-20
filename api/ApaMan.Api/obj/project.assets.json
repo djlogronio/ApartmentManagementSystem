@@ -1,0 +1,153 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ApaMan.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ApaMan.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ApaMan.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApaMan.Application.dll": {}
+        }
+      },
+      "ApaMan.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ApaMan.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApaMan.Contracts.dll": {}
+        }
+      },
+      "ApaMan.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ApaMan.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApaMan.Domain.dll": {}
+        }
+      },
+      "ApaMan.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ApaMan.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ApaMan.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApaMan.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApaMan.Application/1.0.0": {
+      "type": "project",
+      "path": "../ApaMan.Application/ApaMan.Application.csproj",
+      "msbuildProject": "../ApaMan.Application/ApaMan.Application.csproj"
+    },
+    "ApaMan.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../ApaMan.Contracts/ApaMan.Contracts.csproj",
+      "msbuildProject": "../ApaMan.Contracts/ApaMan.Contracts.csproj"
+    },
+    "ApaMan.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ApaMan.Domain/ApaMan.Domain.csproj",
+      "msbuildProject": "../ApaMan.Domain/ApaMan.Domain.csproj"
+    },
+    "ApaMan.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../ApaMan.Infrastructure/ApaMan.Infrastructure.csproj",
+      "msbuildProject": "../ApaMan.Infrastructure/ApaMan.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ApaMan.Application >= 1.0.0",
+      "ApaMan.Contracts >= 1.0.0",
+      "ApaMan.Infrastructure >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\user\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Api\\ApaMan.Api.csproj",
+      "projectName": "ApaMan.Api",
+      "projectPath": "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Api\\ApaMan.Api.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Api\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Application\\ApaMan.Application.csproj": {
+              "projectPath": "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Application\\ApaMan.Application.csproj"
+            },
+            "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Contracts\\ApaMan.Contracts.csproj": {
+              "projectPath": "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Contracts\\ApaMan.Contracts.csproj"
+            },
+            "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Infrastructure\\ApaMan.Infrastructure.csproj": {
+              "projectPath": "d:\\My Projects\\bhouse\\ApartmentManagementSystem\\api\\ApaMan.Infrastructure\\ApaMan.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

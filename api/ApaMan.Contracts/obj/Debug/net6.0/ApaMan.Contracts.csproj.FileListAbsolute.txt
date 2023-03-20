@@ -1,0 +1,12 @@
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\bin\Debug\net6.0\ApaMan.Contracts.deps.json
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\bin\Debug\net6.0\ApaMan.Contracts.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\bin\Debug\net6.0\ApaMan.Contracts.pdb
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ApaMan.Contracts.csproj.AssemblyReference.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ApaMan.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ApaMan.Contracts.AssemblyInfoInputs.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ApaMan.Contracts.AssemblyInfo.cs
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ApaMan.Contracts.csproj.CoreCompileInputs.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ApaMan.Contracts.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\refint\ApaMan.Contracts.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ApaMan.Contracts.pdb
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Contracts\obj\Debug\net6.0\ref\ApaMan.Contracts.dll

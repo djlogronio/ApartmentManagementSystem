@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ApaMan.Infrastructure/1.0.0": {
+        "dependencies": {
+          "ApaMan.Application": "1.0.0"
+        },
+        "runtime": {
+          "ApaMan.Infrastructure.dll": {}
+        }
+      },
+      "ApaMan.Application/1.0.0": {
+        "dependencies": {
+          "ApaMan.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ApaMan.Application.dll": {}
+        }
+      },
+      "ApaMan.Domain/1.0.0": {
+        "runtime": {
+          "ApaMan.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApaMan.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApaMan.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApaMan.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

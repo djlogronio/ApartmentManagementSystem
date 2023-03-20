@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ApaMan.Domain/1.0.0": {
+        "runtime": {
+          "ApaMan.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApaMan.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

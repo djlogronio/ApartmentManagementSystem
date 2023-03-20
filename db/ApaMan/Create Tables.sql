@@ -1,116 +1,120 @@
-CREATE TABLE [dbo].[Role] (
-  [RoleId] INT NOT NULL PRIMARY KEY,
-  [RoleName] VARCHAR(50) NOT NULL
+CREATE DATABASE db_ApaMan;
+
+USE db_ApaMan;
+
+CREATE TABLE [tbl_Role] (
+  [fld_RoleId] INT NOT NULL PRIMARY KEY,
+  [fld_RoleName] VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE [dbo].[User] (
-  [UserId] INT NOT NULL PRIMARY KEY,
-  [Username] VARCHAR(255) NOT NULL UNIQUE,
-  [Password] VARCHAR(255) NOT NULL,
-  [Email] VARCHAR(255) NOT NULL UNIQUE,
-  [FirstName] VARCHAR(255) NOT NULL,
-  [LastName] VARCHAR(255) NOT NULL,
-  [PhoneNumber] VARCHAR(20),
-  [Address] TEXT,
-  [RoleId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Role](RoleId)
+CREATE TABLE [tbl_User] (
+  [fld_UserId] INT NOT NULL PRIMARY KEY,
+  [fld_Username] VARCHAR(255) NOT NULL UNIQUE,
+  [fld_Password] VARCHAR(255) NOT NULL,
+  [fld_Email] VARCHAR(255) NOT NULL UNIQUE,
+  [fld_FirstName] VARCHAR(255) NOT NULL,
+  [fld_LastName] VARCHAR(255) NOT NULL,
+  [fld_PhoneNumber] VARCHAR(20),
+  [fld_Address] TEXT,
+  [fld_RoleId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Role](fld_RoleId)
 );
 
-CREATE TABLE [dbo].[Property] (
-  [PropertyId] INT NOT NULL PRIMARY KEY,
-  [PropertyName] VARCHAR(255) NOT NULL,
-  [PropertyAddress] TEXT NOT NULL,
-  [TotalApartments] INT NOT NULL,
-  [TotalRooms] INT NOT NULL
+CREATE TABLE [tbl_Property] (
+  [fld_PropertyId] INT NOT NULL PRIMARY KEY,
+  [fld_PropertyName] VARCHAR(255) NOT NULL,
+  [fld_PropertyAddress] TEXT NOT NULL,
+  [fld_TotalApartments] INT NOT NULL,
+  [fld_TotalRooms] INT NOT NULL
 );
 
-CREATE TABLE [dbo].[Apartment] (
-  [ApartmentId] INT NOT NULL PRIMARY KEY,
-  [ApartmentName] VARCHAR(255) NOT NULL,
-  [ApartmentDescription] TEXT,
-  [ApartmentSize] FLOAT NOT NULL,
-  [ApartmentRentAmount] FLOAT NOT NULL,
-  [PropertyId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Property](PropertyId)
+CREATE TABLE [tbl_Apartment] (
+  [fld_ApartmentId] INT NOT NULL PRIMARY KEY,
+  [fld_ApartmentName] VARCHAR(255) NOT NULL,
+  [fld_ApartmentDescription] TEXT,
+  [fld_ApartmentSize] FLOAT NOT NULL,
+  [fld_ApartmentRentAmount] FLOAT NOT NULL,
+  [fld_PropertyId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Property](fld_PropertyId)
 );
 
-CREATE TABLE [dbo].[Room] (
-  [RoomId] INT NOT NULL PRIMARY KEY,
-  [RoomNumber] VARCHAR(20) NOT NULL,
-  [RoomDescription] TEXT,
-  [RoomRentAmount] FLOAT NOT NULL,
-  [ApartmentId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Apartment](ApartmentId)
+CREATE TABLE [tbl_Room] (
+  [fld_RoomId] INT NOT NULL PRIMARY KEY,
+  [fld_RoomNumber] VARCHAR(20) NOT NULL,
+  [fld_RoomDescription] TEXT,
+  [fld_RoomRentAmount] FLOAT NOT NULL,
+  [fld_ApartmentId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Apartment](fld_ApartmentId)
 );
 
-CREATE TABLE [dbo].[Rent] (
-  [RentId] INT NOT NULL PRIMARY KEY,
-  [RentAmount] FLOAT NOT NULL,
-  [RentStartDate] DATE NOT NULL,
-  [RentEndDate] DATE NOT NULL,
-  [RentPaidDate] DATE,
-  [IsRentPaid] BIT NOT NULL,
-  [RentNotes] TEXT,
-  [ResidentId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[User](UserId),
-  [RoomId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Room](RoomId)
+CREATE TABLE [tbl_Rent] (
+  [fld_RentId] INT NOT NULL PRIMARY KEY,
+  [fld_RentAmount] FLOAT NOT NULL,
+  [fld_RentStartDate] DATE NOT NULL,
+  [fld_RentEndDate] DATE NOT NULL,
+  [fld_RentPaidDate] DATE,
+  [fld_IsRentPaid] BIT NOT NULL,
+  [fld_RentNotes] TEXT,
+  [fld_ResidentId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_User](fld_UserId),
+  [fld_RoomId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Room](fld_RoomId)
 );
 
-CREATE TABLE [dbo].[Maintenance] (
-  [MaintenanceId] INT NOT NULL PRIMARY KEY,
-  [MaintenanceRequestDate] DATE NOT NULL,
-  [MaintenanceDescription] TEXT NOT NULL,
-  [MaintenanceStatus] VARCHAR(50) NOT NULL,
-  [MaintenanceNotes] TEXT,
-  [ResidentId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[User](UserId),
-  [RoomId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Room](RoomId)
+CREATE TABLE [tbl_Maintenance] (
+  [fld_MaintenanceId] INT NOT NULL PRIMARY KEY,
+  [fld_MaintenanceRequestDate] DATE NOT NULL,
+  [fld_MaintenanceDescription] TEXT NOT NULL,
+  [fld_MaintenanceStatus] VARCHAR(50) NOT NULL,
+  [fld_MaintenanceNotes] TEXT,
+  [fld_ResidentId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_User](fld_UserId),
+  [fld_RoomId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Room](fld_RoomId)
 );
 
-CREATE TABLE [dbo].[Expense] (
-  [ExpenseId] INT NOT NULL PRIMARY KEY,
-  [ExpenseDate] DATE NOT NULL,
-  [ExpenseAmount] FLOAT NOT NULL,
-  [ExpenseDescription] TEXT NOT NULL,
-  [ExpenseCategory] VARCHAR(50) NOT NULL,
-  [PropertyId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Property](PropertyId)
+CREATE TABLE [tbl_Expense] (
+  [fld_ExpenseId] INT NOT NULL PRIMARY KEY,
+  [fld_ExpenseDate] DATE NOT NULL,
+  [fld_ExpenseAmount] FLOAT NOT NULL,
+  [fld_ExpenseDescription] TEXT NOT NULL,
+  [fld_ExpenseCategory] VARCHAR(50) NOT NULL,
+  [fld_PropertyId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Property](fld_PropertyId)
 );
 
-CREATE TABLE [dbo].[Occupancy] (
-  [OccupancyId] INT NOT NULL PRIMARY KEY,
-  [ApartmentId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Apartment](ApartmentId),
-  [RoomId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Room](RoomId),
-  [ResidentId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[User](UserId),
-  [OccupancyStartDate] DATE NOT NULL,
-  [OccupancyEndDate] DATE
+CREATE TABLE [tbl_Occupancy] (
+  [fld_OccupancyId] INT NOT NULL PRIMARY KEY,
+  [fld_ApartmentId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Apartment](fld_ApartmentId),
+  [fld_RoomId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_Room](fld_RoomId),
+  [fld_ResidentId] INT NOT NULL FOREIGN KEY REFERENCES [tbl_User](fld_UserId),
+  [fld_OccupancyStartDate] DATE NOT NULL,
+  [fld_OccupancyEndDate] DATE
 );
 
-CREATE TABLE [dbo].[Notification] (
-    [NotificationId] INT PRIMARY KEY,
-    [NotificationDate] DATE,
-    [NotificationTitle] VARCHAR(255),
-    [NotificationMessage] TEXT,
-    [RecipientId] INT FOREIGN KEY REFERENCES [dbo].[User]([UserId])
+CREATE TABLE [tbl_Notification] (
+    [fld_NotificationId] INT PRIMARY KEY,
+    [fld_NotificationDate] DATE,
+    [fld_NotificationTitle] VARCHAR(255),
+    [fld_NotificationMessage] TEXT,
+    [fld_RecipientId] INT FOREIGN KEY REFERENCES [tbl_User]([fld_UserId])
 );
 
-CREATE TABLE [dbo].[Security] (
-    [SecurityId] INT PRIMARY KEY,
-    [SecurityGuardName] VARCHAR(255),
-    [SecurityGuardPhone] VARCHAR(20),
-    [SurveillanceCameraLocation] TEXT,
-    [SurveillanceCameraModel] VARCHAR(50),
-    [PropertyId] INT FOREIGN KEY REFERENCES [dbo].[Property]([PropertyId])
+CREATE TABLE [tbl_Security] (
+    [fld_SecurityId] INT PRIMARY KEY,
+    [fld_SecurityGuardName] VARCHAR(255),
+    [fld_SecurityGuardPhone] VARCHAR(20),
+    [fld_SurveillanceCameraLocation] TEXT,
+    [fld_SurveillanceCameraModel] VARCHAR(50),
+    [fld_PropertyId] INT FOREIGN KEY REFERENCES [tbl_Property]([fld_PropertyId])
 );
 
-CREATE TABLE [dbo].[Booking] (
-    [BookingId] INT PRIMARY KEY,
-    [BookingStartDate] DATE,
-    [BookingEndDate] DATE,
-    [BookingNotes] TEXT,
-    [UserId] INT FOREIGN KEY REFERENCES [dbo].[User]([UserId]),
-    [RoomId] INT FOREIGN KEY REFERENCES [dbo].[Room]([RoomId])
+CREATE TABLE [tbl_Booking] (
+    [fld_BookingId] INT PRIMARY KEY,
+    [fld_BookingStartDate] DATE,
+    [fld_BookingEndDate] DATE,
+    [fld_BookingNotes] TEXT,
+    [fld_UserId] INT FOREIGN KEY REFERENCES [tbl_User]([fld_UserId]),
+    [fld_RoomId] INT FOREIGN KEY REFERENCES [tbl_Room]([fld_RoomId])
 );
 
-CREATE TABLE [dbo].[Feedback] (
-    [FeedbackId] INT PRIMARY KEY,
-    [FeedbackDate] DATE,
-    [FeedbackTitle] VARCHAR(255),
-    [FeedbackMessage] TEXT,
-    [FeedbackCategory] VARCHAR(50),
-    [UserId] INT FOREIGN KEY REFERENCES [dbo].[User]([UserId]),
+CREATE TABLE [tbl_Feedback] (
+    [fld_FeedbackId] INT PRIMARY KEY,
+    [fld_FeedbackDate] DATE,
+    [fld_FeedbackTitle] VARCHAR(255),
+    [fld_FeedbackMessage] TEXT,
+    [fld_FeedbackCategory] VARCHAR(50),
+    [fld_UserId] INT FOREIGN KEY REFERENCES [tbl_User]([fld_UserId]),
 );

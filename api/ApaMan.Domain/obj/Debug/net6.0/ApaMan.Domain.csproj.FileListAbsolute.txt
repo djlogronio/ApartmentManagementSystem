@@ -1,0 +1,12 @@
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\bin\Debug\net6.0\ApaMan.Domain.deps.json
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\bin\Debug\net6.0\ApaMan.Domain.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\bin\Debug\net6.0\ApaMan.Domain.pdb
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ApaMan.Domain.csproj.AssemblyReference.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ApaMan.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ApaMan.Domain.AssemblyInfoInputs.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ApaMan.Domain.AssemblyInfo.cs
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ApaMan.Domain.csproj.CoreCompileInputs.cache
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ApaMan.Domain.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\refint\ApaMan.Domain.dll
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ApaMan.Domain.pdb
+D:\My projects\bhouse\ApartmentManagementSystem\api\ApaMan.Domain\obj\Debug\net6.0\ref\ApaMan.Domain.dll

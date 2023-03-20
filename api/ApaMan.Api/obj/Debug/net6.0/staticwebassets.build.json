@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pCRJHIegNAjW2F9NaiIykEtDRNQfuIQAW6se6y/tgpQ=",
+  "Source": "ApaMan.Api",
+  "BasePath": "_content/ApaMan.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
